@@ -32,7 +32,7 @@ const ContactForm = () => {
     }
     const newContact = {
       name,
-      number,
+      phone: number,
       id: nanoid(),
     };
     dispatch(createContactThunk(newContact));
