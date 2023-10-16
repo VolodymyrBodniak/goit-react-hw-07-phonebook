@@ -2,7 +2,7 @@ import { useState } from 'react';
 import css from './ContactForm.module.css';
 import { nanoid } from 'nanoid';
 import { useDispatch } from 'react-redux';
-import { addContactAction } from 'redux/contact/slice';
+import { createContactThunk } from 'redux/contact/thunks';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -35,7 +35,7 @@ const ContactForm = () => {
       number,
       id: nanoid(),
     };
-    dispatch(addContactAction(newContact));
+    dispatch(createContactThunk(newContact));
     resetForm();
   };
 
