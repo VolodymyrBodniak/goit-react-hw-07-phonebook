@@ -17,7 +17,7 @@ const ContactList = () => {
     <ul className={css.contactList}>
       {filteredContactsData.map(contact => (
         <li key={contact.id} className={css.contactItem}>
-          {contact.name}: {contact.number}
+          {contact.name}: {contact.phone}
           <button
             type="button"
             className={css.btn}
